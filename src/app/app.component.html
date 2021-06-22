@@ -2,24 +2,46 @@
   <h2>{{ title }}</h2>
 
   <div class="angular-material-gridlist-inner-container">
-    <table style="width: {{tableWidth.width}}; border: 1px solid red;">
+    <table [style.width]="tableWidth.width" style="border: 1px solid red">
       <thead>
         <tr>
           <td>
-            <span> Switch the Table width : <button mat-raised-button color="primary" (click)="changeTableWidth()">Switch</button></span>
-            <span> Current width: {{tableWidth.width}} - {{tableWidth.txt}}</span>
+            <span>
+              Switch the Table width :
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="changeTableWidth()"
+              >
+                Switch
+              </button></span
+            >
+            <span>
+              Current width: {{ tableWidth.width }} - {{ tableWidth.txt }}</span
+            >
           </td>
         </tr>
       </thead>
       <tbody>
-
         <tr>
           <td>
             <h4>Using mat-grid-list</h4>
             <mat-grid-list cols="14" rowHeight="100px">
-              <div style="background-color: aqua; display: flex; flex-direction: row; flex-wrap: wrap-reverse">
-                <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-                  [style.background]="tile.color" class="mat-grid-tile-class">
+              <div
+                style="
+                  background-color: aqua;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap-reverse;
+                "
+              >
+                <mat-grid-tile
+                  *ngFor="let tile of tiles"
+                  [colspan]="tile.cols"
+                  [rowspan]="tile.rows"
+                  [style.background]="tile.color"
+                  class="mat-grid-tile-class"
+                >
                   {{ tile.text }}
                 </mat-grid-tile>
               </div>
@@ -30,14 +52,24 @@
         <tr>
           <td>
             <h4>Using flexbox</h4>
-            <div style="background-color: dodgerblue; display: flex; flex-direction: row; flex-wrap: wrap">
-              <div *ngFor="let tile of tiles" style="background-color: {{ tile.color }};" class="div-tile-class">
+            <div
+              style="
+                background-color: dodgerblue;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+              "
+            >
+              <div
+                *ngFor="let tile of tiles"
+                [style.background]="tile.color"
+                class="div-tile-class"
+              >
                 {{ tile.text }}
               </div>
             </div>
           </td>
         </tr>
-
       </tbody>
     </table>
   </div>
