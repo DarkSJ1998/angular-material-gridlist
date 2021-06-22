@@ -1,0 +1,21 @@
+.angular-material-gridlist-container {
+  padding: 10px 40px;
+}
+
+.angular-material-gridlist-inner-container {
+  border: 1px solid grey;
+  overflow-x: auto;
+}
+
+.mat-grid-tile-class {
+  border: 1px solid black;
+}
+
+.div-tile-class {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
