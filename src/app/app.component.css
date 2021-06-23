@@ -9,6 +9,7 @@
 
 .mat-grid-tile-class {
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .div-tile-class {
@@ -18,4 +19,10 @@
   display: inherit;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.mat-grid-tile-class:hover,
+.div-tile-class:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
